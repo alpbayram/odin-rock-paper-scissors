@@ -1,5 +1,6 @@
 const log = console.log
-
+let humanScore = 0
+let computerScore = 0
 function getComputerChoice() {
 	let randomNumber = Math.floor(Math.random() * 3 + 1)
 	log(randomNumber)
@@ -38,106 +39,89 @@ function getHumanChoice() {
 	}
 }
 
-// return humanChoice === 1 && ComputerChoice === 1
-// 	? alert("Berabere kaldınız. Rakibiniz de taş seçti.")
-// 	: humanChoice === 1 && ComputerChoice === 2
-// 	? alert("Bilgisayar kazandı. Rakibiniz kağıt seçti.")
-// 	: humanChoice === 1 && ComputerChoice === 3
-// 	? alert("Kazandınız. Rakibiniz makas seçti.")
-// 	: humanChoice === 2 && ComputerChoice === 1
-// 	? alert("Kazandınız. Rakibiniz taş seçti.")
-// 	: humanChoice === 2 && ComputerChoice === 2
-// 	? alert("Berabere kaldınız. Rakibiniz de kağıt seçti.")
-// 	: humanChoice === 2 && ComputerChoice === 3
-// 	? alert("Kaybettiniz. Rakibiniz makas seçti.")
-// 	: humanChoice === 3 && ComputerChoice === 1
-// 	? alert("Kaybettiniz. Rakibiniz taş seçti.")
-// 	: humanChoice === 3 && ComputerChoice === 2
-// 	? alert("Kazandınız. Rakibiniz kağıt seçti")
-// 	: humanChoice === 3 && ComputerChoice === 3
-// 	? alert("Berabere kaldınız. Rakibiniz de makas seçti.")
-// 	: alert("Error.")
-
-// playRound(playerSelection, computerSelection)
-
+function scoreAlert() {
+	alert(`Sizin skorunuz: ${humanScore}\nRakibinizin skoru: ${computerScore}`)
+}
 function playGame() {
-	let humanScore = 0
-	let computerScore = 0
-
 	function playRound(humanChoice, ComputerChoice) {
 		if (humanChoice === 1 && ComputerChoice === 1) {
 			alert("Berabere kaldınız. Rakibiniz de taş seçti.")
-			alert(`Sizin skorunuz: ${humanScore}\nRakibinizin skoru: ${computerScore}`)
+			scoreAlert()
 		} else if (humanChoice === 1 && ComputerChoice === 2) {
 			alert("Bilgisayar kazandı. Rakibiniz kağıt seçti.")
 			computerScore++
-			alert(`Sizin skorunuz: ${humanScore}\nRakibinizin skoru: ${computerScore}`)
+			scoreAlert()
 		} else if (humanChoice === 1 && ComputerChoice === 3) {
 			alert("Kazandınız. Rakibiniz makas seçti.")
 			humanScore++
-			alert(`Sizin skorunuz: ${humanScore}\nRakibinizin skoru: ${computerScore}`)
+			scoreAlert()
 		} else if (humanChoice === 2 && ComputerChoice === 1) {
 			alert("Kazandınız. Rakibiniz taş seçti.")
 			humanScore++
-			alert(`Sizin skorunuz: ${humanScore}\nRakibinizin skoru: ${computerScore}`)
+			scoreAlert()
 		} else if (humanChoice === 2 && ComputerChoice === 2) {
 			alert("Berabere kaldınız. Rakibiniz de kağıt seçti.")
-			alert(`Sizin skorunuz: ${humanScore}\nRakibinizin skoru: ${computerScore}`)
+			scoreAlert()
 		} else if (humanChoice === 2 && ComputerChoice === 3) {
 			alert("Kaybettiniz. Rakibiniz makas seçti.")
 			computerScore++
-			alert(`Sizin skorunuz: ${humanScore}\nRakibinizin skoru: ${computerScore}`)
+			scoreAlert()
 		} else if (humanChoice === 3 && ComputerChoice === 1) {
 			alert("Kaybettiniz. Rakibiniz taş seçti.")
 			computerScore++
-			alert(`Sizin skorunuz: ${humanScore}\nRakibinizin skoru: ${computerScore}`)
+			scoreAlert()
 		} else if (humanChoice === 3 && ComputerChoice === 2) {
 			alert("Kazandınız. Rakibiniz kağıt seçti")
 			humanScore++
-			alert(`Sizin skorunuz: ${humanScore}\nRakibinizin skoru: ${computerScore}`)
+			scoreAlert()
 		} else if (humanChoice === 3 && ComputerChoice === 3) {
 			alert("Berabere kaldınız. Rakibiniz de makas seçti.")
-			alert(`Sizin skorunuz: ${humanScore}\nRakibinizin skoru: ${computerScore}`)
+			scoreAlert()
 		} else {
 			alert("Error.")
 			return "Error"
 		}
 	}
+	let leaveGame = false
 	for (let i = 0; i < 2; i++) {
+		log(`Round: ${i + 1}`)
+		alert(`Round: ${i + 1}`)
 		const playerSelection = getHumanChoice()
 		const computerSelection = getComputerChoice()
 		if (playerSelection === 4) {
 			alert("Oyundan çıkılıyor.")
+			leaveGame = true
+
 			break
 		}
 		playRound(playerSelection, computerSelection)
 	}
-	if (humanScore > computerScore) {
-		alert("Siz kazandınız. Tebrikler.")
-	} else if (humanScore < computerScore) {
-		alert("Kaybettiniz. Bilgisayar kazandı.")
-	} else if ((humanScore == computerScore)) {
-		humanScore = 0
-		computerScore = 0
-		let onay =confirm(
-			"Berabere kaldınız. Son bir altın maç ister misiniz? Bunu kazanan dünyaların şampiyonu!!!"
-		)
-		if (onay == true) {
-			const playerSelection = getHumanChoice()
-			const computerSelection = getComputerChoice()
-			if (playerSelection === 4) {
-				alert("Oyundan çıkılıyor.")
+	if (leaveGame != true) {
+		if (humanScore > computerScore) {
+			alert("Siz kazandınız. Tebrikler.")
+		} else if (humanScore < computerScore) {
+			alert("Kaybettiniz. Bilgisayar kazandı.")
+		} else if (humanScore == computerScore) {
+			humanScore = 0
+			computerScore = 0
+			let onay = confirm("Berabere kaldınız. Son bir altın maç ister misiniz?")
+			if (onay == true) {
+				const playerSelection = getHumanChoice()
+				const computerSelection = getComputerChoice()
+				if (playerSelection === 4) {
+					alert("Oyundan çıkılıyor.")
+				}
+				playRound(playerSelection, computerSelection)
+				if (humanScore > computerScore) {
+					alert("Şampiyon sizsiniz.")
+				} else if (humanScore < computerScore) {
+					alert("Yenildin!!!")
+				} else {
+					alert("Yine berabere!!!")
+				}
+			} else {
+				alert("Sonuç beraberlik.")
 			}
-			playRound(playerSelection, computerSelection)
-			if (humanScore > computerScore) {
-				alert("Dünyaların şampiyonusun harikasın sezizişkom mezizişkom!!!")
-			} else if(humanScore< computerScore){
-				alert("Yenildin!!!\nEzikistan başbakanısın sezizişkom!!!")
-			}else{
-                alert("Yine berabere!!!\nEzikistan başbakanısın sezizişkom!!!")
-            }
-		} else {
-			alert("Sonuç beraberlik o zaman ezikistannnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn.")
 		}
 	}
 }
