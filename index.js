@@ -6,17 +6,32 @@ function getComputerChoice() {
 	log(randomNumber)
 	if (randomNumber === 1) {
 		log("Taş")
+		dynamicImageComputer.src = "misc/mickeyRockM.png"
+		resultContainer.append(dynamicImageComputer)
 		return 1
+
 	} else if (randomNumber === 2) {
 		log("Kağıt")
+		dynamicImageComputer.src = "misc/mickeyPaperM.png"
+		resultContainer.append(dynamicImageComputer)
 		return 2
 	} else if (randomNumber === 3) {
 		log("Makas")
+		dynamicImageComputer.src = "misc/mickeyScissorsM.png"
+		resultContainer.append(dynamicImageComputer)
 		return 3
 	}
 }
 const logBubble = document.querySelector(".log")
 const scoreLog = document.querySelector(".score-log")
+let dynamicImageComputer = document.createElement('img');
+let dynamicImageHuman = document.createElement('img');
+dynamicImageComputer.className="mickeyResult2"
+dynamicImageHuman.className="mickeyResult1"
+
+
+const resultContainer = document.querySelector(".result-container")
+
 
 function getHumanChoice(event) {
 	if (round == 5) {
@@ -35,16 +50,22 @@ function getHumanChoice(event) {
 					case "button-rock":
 						console.log("taşa tıklandı")
 						humanChoice = 1
+						dynamicImageHuman.src = "misc/mickeyRock.png"
+						resultContainer.prepend(dynamicImageHuman)
 						break
 
 					case "button-paper":
 						console.log("kagıda tıklandı")
 						humanChoice = 2
+						dynamicImageHuman.src = "misc/mickeyPaper.png"
+						resultContainer.prepend(dynamicImageHuman)
 						break
 
 					case "button-scissors":
 						console.log("makasa tıklandı")
 						humanChoice = 3
+						dynamicImageHuman.src = "misc/mickeyScissors.png"
+						resultContainer.prepend(dynamicImageHuman)
 						break
 
 					default:
@@ -88,15 +109,21 @@ function getHumanChoice(event) {
 					case "button-rock":
 						console.log("taşa tıklandı")
 						humanChoice = 1
+						dynamicImageHuman.src = "misc/mickeyRock.png"
+						resultContainer.prepend(dynamicImageHuman)
 						break
 
 					case "button-paper":
 						console.log("kagıda tıklandı")
 						humanChoice = 2
+						dynamicImageHuman.src = "misc/mickeyPaper.png"
+						resultContainer.prepend(dynamicImageHuman)
 						break
 
 					case "button-scissors":
 						console.log("makasa tıklandı")
+						dynamicImageHuman.src = "misc/mickeyScissors.png"
+						resultContainer.prepend(dynamicImageHuman)
 						humanChoice = 3
 						break
 
@@ -135,6 +162,9 @@ const resetContainerDiv = document.querySelector(".reset-container")
 const playContainerDiv = document.querySelector(".play-container")
 const nextContainerDiv = document.querySelector(".next-container")
 const messageContainer = document.querySelector(".messages-container")
+
+
+
 function nextRound() {
 	scoreLog.remove()
 	if (round == 4) {
@@ -177,7 +207,8 @@ function playGame() {
 		humanScore = 0
 		computerScore = 0
 		scoreAlert()
-		
+		dynamicImageComputer.remove()
+		dynamicImageHuman.remove()
 		if (gameStart == false) {
 			play.remove()
 			playText.remove()
@@ -219,12 +250,15 @@ function playGame() {
 	}
 }
 function resetGame() {
+	
 	if (gameStart == true) {
 		playContainerDiv.append(play)
 		playContainerDiv.append(playText)
 		nextText.remove()
 		next.remove()
 		scoreLog.remove()
+		dynamicImageComputer.remove()
+		dynamicImageHuman.remove()
 		console.log("reset basıldı")
 		logBubble.textContent = "Reset tuşuna basıldı. Tekrar başlamak için Play tuşuna basınız."
 		console.log(`round${round}`)
@@ -238,7 +272,7 @@ function resetGame() {
 		console.log(`Oyun başlaması: ${gameStart}`)
 	} else {
 		console.log("oyun zaten başladı")
-		logBubble.textContent = "oyun zaten başladı"
+		logBubble.textContent = "Oyun resetlendi. Tekrar başlamak için Play tuşuna basınız."
 	}
 }
 buttonRock.addEventListener("click", getHumanChoice)

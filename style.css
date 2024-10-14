@@ -24,6 +24,7 @@ img {
 .gestures,
 .buttons {
 	width: 4.5vw;
+	cursor: pointer;
 }
 p {
 	text-align: center;
@@ -138,16 +139,26 @@ p {
 .messages-container {
 	display: flex;
 	margin-right: 3px;
-	flex-basis: 70%;
+	flex-basis: 40%;
 	flex-direction: column;
 	justify-content: start;
 	gap: 8px;
-	padding-right: 30%
+	
 }
+.result-container{
+	flex-basis: 40%;
+	display: flex;
+	gap: 10%;
+	justify-content: center;
+}
+.mickeyResult1,.mickeyResult2{
+	width: 10em;
+}
+
 .image-container {
 	display: flex;
 	justify-content: flex-end;
-	flex-basis: 30%;
+	flex-basis: 20%;
 }
 .computer {
 	display: flex;
