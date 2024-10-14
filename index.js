@@ -325,19 +325,19 @@ function gestureFunction(event) {
 
 		switch (event.target.id) {
 			case "gestures1":
-				srcGif1 = "/misc/rock.gif"
+				srcGif1 = "misc/rock.gif"
 				document.querySelector("#gestures1").src = srcGif1
 				//console.log("ilk case")
 
 				break
 			case "gestures2":
-				srcGif2 = "/misc/paper.gif"
+				srcGif2 = "misc/paper.gif"
 				document.querySelector("#gestures2").src = srcGif2
 				//console.log("ikinci case")
 				break
 
 			case "gestures3":
-				srcGif3 = "/misc/scissors.gif"
+				srcGif3 = "misc/scissors.gif"
 				document.querySelector("#gestures3").src = srcGif3
 				//console.log("ücüncü case")
 				break
@@ -349,19 +349,19 @@ function gestureFunction(event) {
 	} else if (event.type == "mouseleave") {
 		switch (event.target.id) {
 			case "gestures1":
-				srcGif1 = "/misc/defaultGesture.png"
+				srcGif1 = "misc/defaultGesture.png"
 				document.querySelector("#gestures1").src = srcGif1
 				//console.log("ilk case")
 
 				break
 			case "gestures2":
-				srcGif2 = "/misc/defaultGesture.png"
+				srcGif2 = "misc/defaultGesture.png"
 				document.querySelector("#gestures2").src = srcGif2
 				//console.log("ikinci case")
 				break
 
 			case "gestures3":
-				srcGif3 = "/misc/defaultGesture.png"
+				srcGif3 = "misc/defaultGesture.png"
 				document.querySelector("#gestures3").src = srcGif3
 				//console.log("ücüncü case")
 				break
