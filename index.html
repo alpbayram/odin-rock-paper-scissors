@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="index.js"></script>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="index.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="./misc/favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<img class="header-image1" src="misc/image1.png" alt="" />
+				<h1>TAŞ KAĞIT MAKAS</h1>
+				<img class="header-image2" src="/misc/icon5.png" alt="" />
+			</div>
+			<div class="game-container">
+				<div class="skor-table-section">
+					<div class="computer">
+						<img src="/misc/icon1.png" alt="" />
+						<p class="computer-score">Bilgisayar Skoru: 0</p>
+					</div>
+					<div class="player">
+						<p class="player-score">Oyuncu Skoru: 0</p>
+						<img src="/misc/icon1.png" alt="" />
+					</div>
+				</div>
+				<div class="game-section">
+					<div class="gestures-section">
+						<div class="gesture1">
+							<button id="button-rock" class="gestures-buttons">
+								<img
+									id="gestures1"
+									class="gestures"
+									src="/misc/defaultGesture.png"
+									alt=""
+								/>
+							</button>
+							<p>Taş</p>
+						</div>
+						<div class="gesture2">
+							<button id="button-paper" class="gestures-buttons">
+								<img
+									id="gestures2"
+									class="gestures"
+									src="/misc/defaultGesture.png"
+									alt=""
+								/>
+							</button>
+							<p>Kağıt</p>
+						</div>
+						<div class="gesture3">
+							<button id="button-scissors" class="gestures-buttons">
+								<img
+									id="gestures3"
+									class="gestures"
+									src="/misc/defaultGesture.png"
+									alt=""
+								/>
+							</button>
+							<p>Makas</p>
+						</div>
+					</div>
+					<div class="buttons-section">
+						<div class="next-container">
+							<img id="next-button" class="buttons" src="misc/next.png" alt="" />
+							<p class="next-text">Next tuşu</p>
+						</div>
+						<div class="play-container">
+							<img id="play-button" class="buttons" src="misc/play.png" alt="" /><p class="play-text">Play tuşu</p>
+						</div>
+						<div class="reset-container">
+							<img id="reset-button" class="buttons" src="misc/reset.png" alt="" /><p class="reset-text">Reset tuşu</p>
+						</div>
+					</div>
+				</div>
+				<div class="log-section">
+					<div class="image-container">
+						<img class="cuteRock" src="misc/cuteRock.png" alt="" />
+						<img class="cuteBubble" src="misc/bubble.png" alt="" />
+					</div>
+
+					<div class="messages-container">
+						<p class="score-log"></p>
+						<p class="log"></p>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
