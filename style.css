@@ -4,33 +4,7 @@
 	margin: 0;
 	font-family: "Rubik", sans-serif;
 	line-height: 150%;
-
-	/* border: 1px black solid; */
-}
-
-img {
-	display: flex;
-	width: 4vw;
-	min-width: 64px;
-
-	object-fit: contain;
-}
-.header-image1 {
-	min-width: 9vw;
-}
-.header-image2 {
-	min-width: 6vw;
-}
-.gestures,
-.buttons {
-	width: 4.5vw;
-	cursor: pointer;
-}
-p {
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	border: 1.5px black solid;
 }
 
 .container {
@@ -38,60 +12,123 @@ p {
 	display: flex;
 	color: black;
 	flex-direction: column;
-	flex-basis: auto;
-	flex-grow: 0;
-	flex-shrink: 0;
+	justify-content: center;
 	align-items: center;
-	height: 99.64vh;
+	height: 100vh
 }
+
+img {
+	display: flex;
+	
+	object-fit: contain;
+}
+.cuteRock{
+	width: clamp(3rem, 8vw, 30em);
+}
+.kupa{
+	width: 3vh;
+}
+.header-image1 {
+	
+	width: 7vh;
+}
+
+.header-image2 {
+	width: 4.5vh;
+}
+
+
+
+p {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: clamp(1rem,4vw,2rem);
+}
+
 .header {
 	display: flex;
-	padding: 4em 0;
-	height: 20%;
+	
 	width: 100%;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	color: white;
+	font-size: clamp(0.5rem,3vw,2rem);
+	background-color: #49596e;
+	padding: 1em 1em 1em 1em;
 }
+
 .game-container {
 	display: flex;
 	flex-direction: column;
-	height: 80%;
-	width: 100%;
+	flex-grow: 1;
+	
 	align-items: center;
+	justify-content: center;
+	
+	
 }
+
 .skor-table-section {
 	background-color: #575763;
-	height: 20%;
+	
 	display: flex;
-	width: 100%;
 	justify-content: space-between;
-	padding-left: 15%;
-	padding-right: 15%;
+	width: 100%;
+	flex-basis: 10%;
 	color: white;
-	font-size: x-large;
+	
 }
+
+.computer {
+	display: flex;
+	padding: 0.5rem;
+}
+
+.player {
+	display: flex;
+	padding: 0.5rem;
+}
+
 .game-section {
 	background-color: #83808a;
-	height: 80%;
-	display: flex;
 	width: 100%;
-	justify-content: space-around;
+	display: flex;
+	justify-content: center;
+	flex-basis: 60%;
 	align-items: center;
-	padding-left: 15%;
-	padding-right: 15%;
+	padding: 1em 0 1em 0;
 	flex-direction: column;
 }
 
+.gestures-section {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+
+.buttons {
+	width: clamp(3rem, 8vw, 30em); 
+  
+	cursor: pointer;
+	
+}
+#gestures1,#gestures2,#gestures3{
+	width: clamp(5rem, 20vw, 30em); 
+  height: clamp(7rem, 20vh, 30em);
+	
+}
 .gestures-buttons {
 	border: none;
-	padding: 12px 48px;
+	
 	text-decoration: none;
 	display: flex;
 	transition-duration: 0.4s;
 	cursor: pointer;
 	background-color: #83808a;
-
 	color: black;
 	border: 2px solid #1f2937;
 }
@@ -101,58 +138,29 @@ p {
 	color: white;
 }
 
+.buttons-section {
+	display: flex;
+	
+	width: 100%;
+	align-content: center;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.play-container,.reset-container,.next-container{
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+}
 .log-section {
 	background-color: #b9b1a8;
 	gap: 10px;
 	display: flex;
+	flex-basis: 30%;
 	width: 100%;
 	align-items: center;
-	padding-top: 2em;
-	padding-bottom: 2em;
 	
-}
-.cuteBubble {
-	flex-direction: column;
-	min-width: 24px;
-	height: 100%;
-	width: 2em;
-}
-.score-log{
-	font-size: 2em;
-	justify-content: start;
-	background-color: #c76a36;
-	border-radius: 48px;
-	color: #f5f9bd;
-	padding-left: 24px;
-	padding-right: 24px;
-}
-.log{
-	justify-content: start;
-	background-color: #c76a36;
-	color: #f5f9bd;
-	border-radius: 48px;
-	padding-left: 24px;
-	padding-right:24px;
-	font-size: 1.3em;
-	text-align: left;
-}
-.messages-container {
-	display: flex;
-	margin-right: 3px;
-	flex-basis: 40%;
-	flex-direction: column;
-	justify-content: start;
-	gap: 8px;
-	
-}
-.result-container{
-	flex-basis: 40%;
-	display: flex;
-	gap: 10%;
-	justify-content: center;
-}
-.mickeyResult1,.mickeyResult2{
-	width: 10em;
 }
 
 .image-container {
@@ -160,25 +168,52 @@ p {
 	justify-content: flex-end;
 	flex-basis: 20%;
 }
-.computer {
-	display: flex;
+
+.cuteBubble {
+	flex-direction: column;
+	
+	height: 100%;
+	width: clamp(1.5rem, 0.1vw, 30em);
 }
-.player {
-	display: flex;
+
+.score-log {
+	
+	justify-content: start;
+	background-color: #c76a36;
+	border-radius: 48px;
+	color: #f5f9bd;
+	padding: 0 1rem 0 1rem;
+  font-size: clamp(1rem,4vw,2rem);
 }
-.gestures-section {
-	display: flex;
-	flex-basis: 70%;
-	justify-content: space-around;
-	align-items: center;
-	width: 100%;
+
+.log {
+	justify-content: start;
+	background-color: #c76a36;
+	color: #f5f9bd;
+	border-radius: 48px;
+	padding: 1rem;
+	font-size: clamp(1rem,4vw,2rem);
+	text-align: left;
 }
-.buttons-section {
+
+.messages-container {
 	display: flex;
-	flex-basis: 30%;
-	width: 70%;
-	align-content: center;
+	margin-right: 3px;
+	flex-basis: 40%;
+	flex-direction: column;
+	justify-content: start;
+	gap: 8px;
+}
+
+.result-container {
+	flex-basis: 40%;
+	display: flex;
+	gap: 10%;
 	justify-content: center;
-	align-items: center;
-	gap: 7em;
+}
+
+.mickeyResult1,
+.mickeyResult2 {
+	width: clamp(3rem, 5vw, 30em);
+
 }
