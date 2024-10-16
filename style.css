@@ -4,81 +4,88 @@
 	margin: 0;
 	font-family: "Rubik", sans-serif;
 	line-height: 150%;
-	border: 1.5px black solid;
+	/* border: 1.5px black solid; */
+}
+@media (min-width: 768px) {
+	.container {
+		width: 70vw; /* Geniş ekranlarda genişlik %70 */
+		height: 70vh;
+	}
 }
 
 .container {
-	background-color: #1f2937;
+	background-color: #3e4756;
 	display: flex;
 	color: black;
+	width: 100%;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh
+	height: 100vh;
 }
 
 img {
 	display: flex;
-	
+
 	object-fit: contain;
 }
-.cuteRock{
-	width: clamp(3rem, 8vw, 30em);
+.cuteRock {
+	width: clamp(3rem, 8vw, 25em);
 }
-.kupa{
+.kupa {
 	width: 3vh;
 }
 .header-image1 {
-	
-	width: 7vh;
+	width: clamp(3rem, 8vw, 25em);
 }
 
 .header-image2 {
-	width: 4.5vh;
+	width: clamp(3rem, 8vw, 25em);
 }
-
-
 
 p {
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: clamp(1rem,4vw,2rem);
+	font-size: clamp(1rem, 4vw, 2rem);
 }
 
 .header {
 	display: flex;
-	
+	flex-shrink: 0;
+	flex-grow: 0;
+	flex-basis: 10%;
 	width: 100%;
 	align-items: center;
 	justify-content: space-between;
 	color: white;
-	font-size: clamp(0.5rem,3vw,2rem);
-	background-color: #49596e;
-	padding: 1em 1em 1em 1em;
+	font-size: clamp(0.5rem, 3vw, 2rem);
+	background-color: #1f2937;
+	padding: 0 1rem 0 1rem;
 }
 
 .game-container {
 	display: flex;
 	flex-direction: column;
-	flex-grow: 1;
-	
+	flex-grow: 0;
+	flex-basis: 90%;
+	flex-shrink: 0;
+	width: 100%;
 	align-items: center;
 	justify-content: center;
-	
-	
 }
 
 .skor-table-section {
-	background-color: #575763;
-	
+	background-color: #3f4458;
+	overflow: scroll;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	flex-basis: 10%;
+	flex-grow: 0;
+	flex-shrink: 0;
 	color: white;
-	
 }
 
 .computer {
@@ -92,14 +99,18 @@ p {
 }
 
 .game-section {
-	background-color: #83808a;
+	background-color: #a2acbd;
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	flex-basis: 60%;
+	flex-basis: 50%;
+	flex-grow: 0;
+	flex-shrink: 0;
 	align-items: center;
-	padding: 1em 0 1em 0;
+	gap: 1rem;
 	flex-direction: column;
+	overflow: scroll;
+	color: black;
 }
 
 .gestures-section {
@@ -107,28 +118,28 @@ p {
 	width: 100%;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem;
+	padding: 0 1rem 0 1rem;
 }
 
 .buttons {
-	width: clamp(3rem, 8vw, 30em); 
-  
+	width: clamp(3rem, 8vw, 25em);
+
 	cursor: pointer;
-	
 }
-#gestures1,#gestures2,#gestures3{
-	width: clamp(5rem, 20vw, 30em); 
-  height: clamp(7rem, 20vh, 30em);
-	
+#gestures1,
+#gestures2,
+#gestures3 {
+	width: clamp(4rem, 20vw, 25em);
+	height: clamp(5rem, 15vh, 25em);
 }
 .gestures-buttons {
 	border: none;
-	
+
 	text-decoration: none;
 	display: flex;
 	transition-duration: 0.4s;
 	cursor: pointer;
-	background-color: #83808a;
+	background-color: #a2acbd;
 	color: black;
 	border: 2px solid #1f2937;
 }
@@ -140,80 +151,89 @@ p {
 
 .buttons-section {
 	display: flex;
-	
+
 	width: 100%;
 	align-content: center;
 	justify-content: space-between;
 	align-items: center;
-	
+	padding: 0 1rem 0 1rem;
 }
-.play-container,.reset-container,.next-container{
+.play-container,
+.reset-container,
+.next-container {
 	flex-direction: column;
 	display: flex;
 	align-items: center;
-	padding: 1rem;
+	
 }
 .log-section {
-	background-color: #b9b1a8;
+	
+	background-color: #4a3c28;
 	gap: 10px;
 	display: flex;
-	flex-basis: 30%;
+	flex-basis: 25%;
+	flex-grow: 0;
+	flex-shrink: 0;
 	width: 100%;
 	align-items: center;
-	
+	overflow: scroll;
+	padding: 0 0.5rem 0 0.5rem;
 }
 
 .image-container {
 	display: flex;
 	justify-content: flex-end;
-	flex-basis: 20%;
+	
 }
 
 .cuteBubble {
 	flex-direction: column;
-	
+
 	height: 100%;
-	width: clamp(1.5rem, 0.1vw, 30em);
+	width: clamp(1.5rem, 0.1vw, 25em);
 }
 
 .score-log {
-	
 	justify-content: start;
-	background-color: #c76a36;
+	background-color: #5a5538;
 	border-radius: 48px;
-	color: #f5f9bd;
-	padding: 0 1rem 0 1rem;
-  font-size: clamp(1rem,4vw,2rem);
+	color: white;
+	padding: 0.3rem 1rem 0.3rem 1rem;
+	font-size: clamp(0.8rem, 3vw, 2rem);
+	text-align: center;
 }
 
 .log {
 	justify-content: start;
-	background-color: #c76a36;
-	color: #f5f9bd;
+	background-color: #5a5538;
+	color: white;;
 	border-radius: 48px;
 	padding: 1rem;
-	font-size: clamp(1rem,4vw,2rem);
+	font-size: clamp(0.8rem, 3vw, 2rem);
 	text-align: left;
 }
 
 .messages-container {
 	display: flex;
-	margin-right: 3px;
-	flex-basis: 40%;
+
 	flex-direction: column;
 	justify-content: start;
 	gap: 8px;
 }
 
 .result-container {
-	flex-basis: 40%;
+	flex-basis: 15%;
+	flex-grow: 0;
+	flex-shrink: 0;
 	display: flex;
 	gap: 10%;
 	justify-content: center;
+	width: 100%;
+	overflow: scroll;
+	background-color: #7b6b55;
 }
 
 .mickeyResult1,
 .mickeyResult2 {
-	width: clamp(3rem, 5vw, 30em);
-
+	width: clamp(4rem, 18vw, 25em);
 }

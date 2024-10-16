@@ -28,7 +28,7 @@ let dynamicImageComputer = document.createElement('img');
 let dynamicImageHuman = document.createElement('img');
 dynamicImageComputer.className="mickeyResult2"
 dynamicImageHuman.className="mickeyResult1"
-
+scoreLog.remove()
 
 const resultContainer = document.querySelector(".result-container")
 
