@@ -1,43 +1,24 @@
-# Rock-Paper-scissors Projesi
+# Rock Paper Scissors
 
-Bu proje, [The Odin Project](https://www.theodinproject.com/) kapsamındaki HTML ve CSS becerilerini geliştirmek amacıyla oluşturulan bir "Rock-Paper-Scissors" projesidir.
-
-
-## İçerik
-
-- [Demo](#demo)
-- [Özellikler](#özellikler)
-- [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
-- [İletişim](#iletişim)
-
-
-## Demo
-
-Projenin canlı demosu için [buraya tıklayın](https://alpbayram.github.io/odin-rock-paper-scissors/).
-
+Bu proje, sade ve basit bir Taş Kağıt Makas oyunu sunar. Oyuncu butonlara tıklayarak seçim yapar; bilgisayar ise rastgele bir seçim yapar. Amaç, birkaç tur boyunca oyunu oynayıp sonucu takip etmektir.
 
 ## Özellikler
+- **Oyuncu Seçimi:** Oyuncu, Taş, Kağıt veya Makas seçeneklerinden birini seçebilir.
+- **Bilgisayar Seçimi:** Bilgisayarın yaptığı seçim rastgele belirlenir.
+- **Çoklu Tur:** Her turun sonunda skorlar güncellenir.
+- **Basit Görsellik:** Görseller ve metin güncellemeleriyle oyun akışı takip edilebilir.
+- **Geri Bildirim:** Oyun, skor ve tur sonuçlarını kullanıcıya bildirir.
 
-- Temiz ve modern tasarım
-- Responsive (Mobil uyumlu) yapı
-- HTML5 ve CSS3 ile kodlanmış
-- Kullanıcı dostu arayüz
-
+## Öğrenilenler
+- Temel JavaScript ve DOM manipülasyonu.
+- Fonksiyon kullanımı ve olay dinleyicileri ile basit uygulama mantığının oluşturulması.
+- Küçük ölçekli projeler için temiz ve sürdürülebilir kod yazımı.
 
 ## Kullanılan Teknolojiler
+- **HTML:** Temel sayfa yapısı.
+- **CSS:** Basit stil düzenlemeleri.
+- **JavaScript:** Oyun mantığının uygulanması.
 
-- HTML5
-- CSS3
-- [Font Awesome](https://fontawesome.com/) (İkonlar için)
-- [Google Fonts](https://fonts.google.com/) (Yazı tipleri için)
-
-
-## Iletişim
-
-Projeyle ilgili herhangi bir sorunuz olursa benimle iletişime geçebilirsiniz:
-
-- E-posta: alperen-bayram@hotmail.com
-- GitHub: [@alpbayram](https://github.com/alpbayram)
-
-Teşekkürler!
-
+## Canlı Proje
+Projenin canlı halini şu adresten görebilirsiniz:  
+[https://alpbayram.github.io/odin-rock-paper-scissors/](https://alpbayram.github.io/odin-rock-paper-scissors/)
